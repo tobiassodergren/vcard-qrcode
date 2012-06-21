@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset=iso-8859-1>
+<head>
+    <title>Create a VCARD QR Code</title>
+    <link type="text/css" href="css/smoothness/jquery-ui-1.8.21.custom.css" rel="stylesheet"/>
+    <link type="text/css" href="css/index.css" rel="stylesheet"/>
+</head>
+<body>
+<script data-main="js/main" src="js/require-jquery.js"></script>
+<form id="form">
+    <fieldset>
+        <legend>VCard information</legend>
+        <p>
+            <label for="surname">Förnamn:</label>
+            <input type="text" name="surname" id="surname"/>
+
+            <label for="lastname">Efternamn:</label>
+            <input type="text" name="lastname" id="lastname"/>
+        </p>
+
+        <p>
+            <label for="cell">Mobilnummer:</label>
+            <input type="tel" name="cell" id="cell"/>
+
+            <label for="work">Kontorsnummer:</label>
+            <input type="tel" name="work" id="work"/>
+
+            <label for="work">Internnummer:</label>
+            <input type="tel" name="other" id="other"/>
+        </p>
+
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"/>
+        </p>
+
+        <fieldset>
+            <legend>Storlek på QR code</legend>
+            <input type="radio" name="size" value="74" checked/>74 px
+            <input type="radio" name="size" value="146"/>146 px
+        </fieldset>
+        <input type="submit" id="submit" value="Generate QR Code"/>
+    </fieldset>
+</form>
+<div id="result" class="ui-helper-hidden ui-widget">
+    <fieldset class="ui-widget-content">
+        <legend class="ui-widget-header ui-corner-all">Länk till bilden</legend>
+        <div id="qrcode-link" class="ui-widget-content"></div>
+    </fieldset>
+    <fieldset class="ui-widget-content">
+        <legend class="ui-widget-header ui-corner-all">Genererad QR Code</legend>
+        <img id="qrcode" src=""/>
+    </fieldset>
+</div>
+</body>
+</html>
